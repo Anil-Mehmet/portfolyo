@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proje Detayları — Personel Kayıt Sistemi</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .project-detail {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #11182700; 
+    }
+
+    .detail-hero {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .hero-left {
+      background: #11182700;
+    }
+
+    .project-title {
+      font-size: 32px;
+      color: #8b5cf6;
+      margin-bottom: 10px;
+    }
+
+    .project-sub {
+      font-size: 16px;
+      color: #d0d0d0;
+      margin-bottom: 18px;
+    }
+
+    .meta-badge {
+      background: rgba(139,92,246,0.12);
+      color: #eae6ff;
+      border: 1px solid rgba(139,92,246,0.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    .hero-right {
+      background: #1f2937;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .thumbs img {
+      width: 140px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform .15s, border-color .15s;
+    }
+
+    .thumbs img:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139,92,246,0.4);
+    }
+
+    .section {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .section h3 {
+      color: #8b5cf6;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .features, .tech {
+      background: #1f2937;
+      padding: 16px;
+      border-radius: 10px;
+      color: #cfcfe0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    .features ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #8b5cf6;
+      top: 0;
+    }
+
+    .tech .stack {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(139,92,246,0.12);
+      border: 1px solid rgba(139,92,246,0.16);
+      color: #e8e6ff;
+      font-size: 13px;
+    }
+
+    .cta-row {
+      margin-top: 22px;
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      display:inline-block;
+      background: #8b5cf6;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration:none;
+      font-weight:600;
+      transition: background .18s, transform .12s;
+    }
+
+    .btn:hover { transform: translateY(-3px); background:#7b3ce0; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .detail-hero { grid-template-columns: 1fr; }
+      .hero-right { order: 2; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Basit Navbar (site ile tutarlı) -->
+  <nav class="navbar">
+    <h3 class="baslik">Anıl Mehmet YILDIZ</h3>
+    <ul class="links">
+      <li><a href="index.html#hakkimda">Hakkımda</a></li>
+      <li><a href="index.html#projeler">Projeler</a></li>
+      <li><a href="index.html#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Proje Detay İçeriği -->
+  <main class="project-detail detail-icerik" role="main">
+    <div class="detail-hero">
+      <!-- Sol kısım: Başlık, açıklama, özellikler -->
+      <div class="hero-left">
+        <div class="project-title">Personel Kayıt Sistemi</div>
+        <div class="project-sub">
+          Personel giriş-çıkış, kayıt, arama, raporlama ve yönetim işlemlerini kolaylaştıran kurumsal web uygulaması.
+        </div>
+
+        <div class="section">
+          <div class="features">
+            <h3>Ne İşe Yarar?</h3>
+            <ul>
+              <li>Personel bilgilerini kolayca kaydetme ve düzenleme.</li>
+              <li>Barkod ile giriş-çıkış takibi ve zaman damgası kaydı.</li>
+              <li>Gelişmiş filtreleme ve tarih aralığına göre raporlama.</li>
+              <li>Admin paneli ile yetki yönetimi ve hareketler takibi.</li>
+            </ul>
+          </div>
+
+          <div class="features">
+            <h3>Açıklama</h3>
+            <p>
+              Bu uygulama, küçük ve orta ölçekli işletmeler için personel yönetimini sade ve güvenli hale getirir.
+              ASP.NET Core(MVC) backend ile RESTful API'ler kullanılarak geliştirildi; ön yüzde responsive tasarım ve
+              kullanıcı dostu arayüz bulunur.
+            </p>
+          </div>
+
+          <div class="tech">
+            <h3>Kullanılan Teknolojiler</h3>
+            <span class="stack">ASP.NET Core(MVC)</span>
+            <span class="stack">MSSQL</span>
+            <span class="stack">HTML & CSS</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="index.html#projeler">Geri Dön</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ kısım: görsel + küçük galeri -->
+      <aside class="hero-right" aria-label="Proje görselleri">
+        <img id="mainImage" class="main-image" src="img/Personel-Kayıt-Sistemi/anasayfa.png" alt="Personel Kayıt Sistemi — ana ekran">
+        <div class="thumbs" aria-hidden="false">
+          <img src="img/Personel-Kayıt-Sistemi/anasayfa.png" alt="Ekran görüntüsü 1" data-full="img/Personel-Kayıt-Sistemi/anasayfa.png">
+          <img src="img/Personel-Kayıt-Sistemi/login.png" alt="Ekran görüntüsü 1" data-full="img/Personel-Kayıt-Sistemi/login.png">
+          <img src="img/Personel-Kayıt-Sistemi/personel.png" alt="Ekran görüntüsü 2" data-full="img/Personel-Kayıt-Sistemi/personel.png">
+          <img src="img/Personel-Kayıt-Sistemi/barkod.png" alt="Ekran görüntüsü 3" data-full="img/Personel-Kayıt-Sistemi/barkod.png">
+          <img src="img/Personel-Kayıt-Sistemi/hareketler1.png" alt="Ekran görüntüsü 4" data-full="img/Personel-Kayıt-Sistemi/hareketler1.png">
+          <img src="img/Personel-Kayıt-Sistemi/hareketler2.png" alt="Ekran görüntüsü 5" data-full="img/Personel-Kayıt-Sistemi/hareketler2.png">
+        </div>
+
+        <!-- Kısa proje bilgisi -->
+        <div style="margin-top:14px;color:#cfcfe0;font-size:13px;">
+          <strong>Roller:</strong> Backend & Frontend Development<br>
+          <strong>Süre:</strong> 2 hafta 
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- Footer (ayrıntı sayfasında da aynı footer kullanılabilir) -->
+  <footer>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/anilmehmetyildiz1207/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Anil-Mehmet" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/anil.yldz_/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Anıl Mehmet YILDIZ - Tüm hakları saklıdır.</p>
+  </footer>
+
+  <!-- Basit JS: küçük galeri etkileşimi (thumbnail -> main image) -->
+  <script>
+    document.querySelectorAll('.thumbs img').forEach(img => {
+      img.addEventListener('click', () => {
+        const full = img.dataset.full || img.src;
+        document.getElementById('mainImage').src = full;
+      });
+    });
+  </script>
+
+  <!-- Font Awesome (ikonlar için) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* ===================== Genel Ayarlar ===================== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1f2937; 
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+
+/* ===================== Navbar ===================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #1f2937; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 1000;
+    border-bottom: 1px solid #3b4252;
+    border-radius: 0 0 10px 10px; /* Köşeleri biraz yuvarlattık */
+}
+
+.navbar .baslik {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b5cf6;
+}
+
+.navbar .baslik a {
+    text-decoration: none;
+    color: inherit; /* h3'ün rengini miras al */
+}
+
+.navbar .links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.navbar .links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #8b5cf6;
+    transition: width 0.3s ease;
+}
+
+.navbar .links a:hover::after {
+    width: 100%;
+}
+
+/* ===================== Profil Bölümü ===================== */
+.profil {
+    text-align: center;
+    padding: 80px 20px;
+    background: #1f2937;
+}
+
+.profil h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #e0e0e0;
+}
+
+.profil h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #8b5cf6;
+}
+
+.profil .foto {
+    margin-top: 20px;
+    width: 280px; 
+    height: 330px;
+    object-fit: cover;
+    border-radius: 25%;
+    border: 4px solid #8b5cf6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+/* ===================== Hakkımda Bölümü ===================== */
+.hakkimda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 10%;
+    gap: 30px;
+    background: #1f2937; 
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.hakkimda .left {
+    flex: 1 1 60%;
+}
+
+.hakkimda h2 {
+     font-size: 28px;
+    color: #8b5cf6;
+    margin-bottom: 15px;
+}
+
+.hakkimda .blog {
+    font-size: 16px;
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+.hakkimda .logo {
+    flex: 0 0 120px;
+    font-size: 80px;
+    color: #8b5cf6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ===================== Projeler Bölümü ===================== */
+.projects {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 40px;
+    color: #8b5cf6;
+    font-size: 30px;
+}
+
+.project {
+    background: #1f2937; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    width: 280px;
+    vertical-align: top;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project h4 {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.project .aciklama {
+    font-size: 14px;
+    color: #c0c0c0;
+    margin-bottom: 15px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #8b5cf6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.project a:hover {
+    background: #7b3ce0;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* ===================== İletişim Bölümü ===================== */
+.iletisim {
+    padding: 60px 10%;
+}
+
+.iletisim h2 {
+    margin-bottom: 20px;
+    color: #8b5cf6;
+    text-align: center;
+    font-size: 28px;
+}
+
+.iletisim form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #1f2937; 
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.iletisim label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.iletisim input, .iletisim textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: #1f2937;
+    color: #e0e0e0;
+    transition: border-color 0.3s;
+}
+
+.iletisim input::placeholder, .iletisim textarea::placeholder {
+    color: #888;
+}
+
+.iletisim input:focus, .iletisim textarea:focus {
+    border-color: #8b5cf6;
+}
+
+.iletisim button {
+    padding: 12px;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.iletisim button:hover {
+    background: #7b3ce0;
+}
+
+/* ===================== Mesajlar Bölümü ===================== */
+.mesajlar {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1f2937; 
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    color: #e0e0e0;
+}
+
+/* Mesaj listesi */
+#mesaj-listesi {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
+/* Tek bir mesaj kutucuğu */
+#mesaj-listesi li {
+    background: #111827;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* Hover efekti */
+#mesaj-listesi li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* İsim kısmı vurgusu */
+#mesaj-listesi li strong {
+    color: #8b5cf6; 
+    margin-right: 6px;
+}
+
+
+/* ===================== Footer ===================== */
+footer {
+    background: #111827;
+    color: #eee;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer .socials {
+    margin-bottom: 15px;
+}
+
+footer .socials a {
+    color: #eee;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+footer .socials a:hover {
+    color: #8b5cf6;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar'a animasyon uygulama (0.5s gecikme) */
+.navbar {
+    /* ... mevcut stiller ... */
+    opacity: 0; /* Başlangıçta görünmez yap */
+    animation: fadeInDown 0.5s ease-out 0.5s forwards; /* 0.5s sonra başla */
+}
+
+/* Profil bölümüne animasyon uygulama (1s gecikme) */
+.profil {
+    /* ... mevcut stiller ... */
+    opacity: 0; /* Başlangıçta görünmez yap */
+    animation: fadeInDown 0.5s ease-out 1s forwards; /* 1s sonra başla */
+}
+
+
+/* 2. Scroll (Kaydırma) Animasyonu */
+/* ---------------------------------- */
+
+/* Animasyon için başlangıç durumu (görünmez) */
+.gorunme {
+    opacity: 0;
+    transform: translateY(50px); /* Aşağıdan gelsin */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 0.5s süren animasyon */
+}
+
+.goster {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.detail-icerik {
+    opacity: 0; 
+    animation: fadeInDown 0.5s ease-out 1s forwards; /* 1s sonra başla */
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 992px) {
+    .hakkimda {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hakkimda i {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .project {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar .links {
+        flex-direction: column;
+        align-items: center;
+    }
+}

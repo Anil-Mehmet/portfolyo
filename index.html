@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body id="ana-sayfa">
+    
+    <nav class="navbar">
+        <h3 class="baslik"><a href="#ana-sayfa">Anıl Mehmet YILDIZ</a></h3>
+        <ul class="links">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="profil">
+        <h2>Ben Anıl Mehmet</h2>
+        <h1>Web Developer</h1>  
+        <img class="foto" src="img/profil.jpg" alt="Profil Fotoğrafı">
+    </div>
+
+    <div id="hakkimda" class="hakkimda gorunme">
+        <div class="left">
+            <h2>Hakkımda</h2>
+            <p class="blog">
+                Merhaba, ben Anıl Mehmet YILDIZ. Kocaeli Üniversitesi Bilgisayar Programcılığı öğrencisiyim. Full-stack .NET Developer alanında kendimi geliştiriyorum. Gerçek dünya problemlerine çözüm üretebilecek projeler üzerinde çalışmayı seviyorum. Web teknolojileri (HTML, CSS, JavaScript) ile frontend, ASP.NET Core ve MSSQL ile backend geliştirme konularında deneyim kazanıyorum. Hedefim, modern yazılım çözümleri üreterek hem bireysel hem de ekip çalışmalarında değer katmak.
+            </p>
+        </div>
+        <i class="fa-solid fa-laptop-code logo"></i>
+    </div>
+
+    
+    <div id="projeler" class="projects gorunme">
+        <h2>Projeler</h2>
+        <div class="project">
+            <h4>Personel Kayıt Sistemi</h4>
+            <p class="aciklama">Personel kayıt ve yönetim sistemi uygulaması.</p>
+            <a href="project-detail1.html">Detaylar</a>
+        </div>
+        <div class="project">
+            <h4>Sözify</h4>
+            <p class="aciklama">Sosyal medya ve içerik paylaşım uygulaması.</p>
+            <a href="project-detail2.html">Detaylar</a>
+        </div>
+        <div class="project">
+            <h4>Dropbox</h4>
+            <p class="aciklama">Dosya depolama ve paylaşım uygulaması.</p>
+            <a href="project-detail3.html">Detaylar</a>
+        </div>
+    </div>
+
+    <section id="iletisim" class="iletisim gorunme">
+        <h2>İletişim</h2>
+        <form id="iletisim-form" action="#" method="post">
+            <div>
+                <label for="isim">İsim Soyisim:</label>
+                <input type="text" id="isim" name="isim" placeholder="Adınızı ve soyadınızı girin" required>
+            </div>
+            <div>
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı yazın" required></textarea>
+            </div>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+
+    <section class="mesajlar gorunme">
+        <h2>Mesajlar</h2>
+        <ul id="mesaj-listesi"></ul>
+    </section>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/anilmehmetyildiz1207/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Anil-Mehmet" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/anil.yldz_/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Anıl Mehmet YILDIZ - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
